@@ -37,9 +37,170 @@
   }
 }
 
-.horizontal-counters{display: flex; flex-direction: row;}
+h1 {
+  text-align: center;
+  font-size: 28px;
+  text-shadow: 2px 2px 5px grey;
+}
 
-table, th, tr, td {
-  border: 1px solid white;
+h2 {
+  text-align: center;
+  font-size: 28px;
+  text-shadow: 2px 2px 5px grey;
+}
+
+h1 {
+  page-break-before: always;
+}
+
+h3 {
+  page-break-after: avoid !important;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Audiowide', sans-serif;
+}
+h1, h2, h4, h5, h6 {
+  page-break-after: avoid !important;
+  font-family: 'Black Ops One', cursive;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-size: 12px;
+  line-height: 100%;
+  font-family: 'Audiowide', sans-serif;
+}
+
+hr {
+  border-top: 3px dotted black;
+}
+
+p.notes {
+  font-size: 12px;
+  font-family: 'Audiowide', sans-serif;
+  width: 85%;
+  border-radius: 20px;
+  border: 1px dotted black;
+  width: 85%;
+  padding: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+
+table {
+  margin: 8px auto;
+}
+
+table, th, td {
+  border: 1px solid black !important;
   border-collapse: collapse;
 }
+
+th {    
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 12pt;
+  border-bottom: solid #ddd;
+  border-bottom-width: 2px;
+  background-color: #413839;
+  color: white;
+  text-align: center;
+  padding: 8pt;
+}
+
+td {
+  font-family: 'Audiowide', sans-serif;
+  padding: 4pt;
+  padding-left: 5pt;
+}
+
+table.statblock {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+th.statblock {
+  padding: 8pt;
+  height: 8pt;
+  font-size: 16pt;
+}
+
+td.statblock {
+  font-family: 'Audiowide', sans-serif;
+  text-align: center;
+  padding: 6pt 10pt;
+  font-size: 14pt;
+}
+
+table.abilities {
+  margin: 8px auto;
+  text-align: left 2px;
+  grid-column: 2;
+  grid-row: 2 / 4;
+}
+
+th.abilities {
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 12pt;
+  border-bottom: solid #ddd;
+  border-bottom-width: 2px;
+  background-color: #413839;
+  color: white;
+  text-align: center;
+}
+
+td.abilities {
+  font-family: 'Audiowide', sans-serif;
+  padding-left: 3pt;
+  padding-top: 4pt 4pt;
+  font-size: 10pt;
+}
+
+table.psychic {
+  text-align: left 1px;
+  grid-column: 2;
+  grid-row: 4;
+}
+
+td.psychic {
+  font-size: 10pt;
+}
+
+table.wargear {
+  text-align: left 1px;
+  grid-column: 3;
+  grid-row: 3 / 5;
+}
+
+td.wargear {
+  font-size: 10pt;
+}
+
+/*
+th {
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 10px;
+  font-family: 'Black Ops One', cursive;
+  border-bottom: solid #ddd;
+  border-bottom-width: 2px;
+  background-color: #413839;
+  color: white;
+  text-align: center;
+}
+
+td {
+  padding: 1px;
+  padding-left: 5px;
+  padding-right: 3px;
+  font-size: 7px;
+  border-bottom: solid #ddd;
+  border-bottom-width: 1px;
+}
+*/
+tr:nth-child(2n+1) {background-color: #e0e0e0;}
+td.statblock:nth-child(even) {background-color: #e0e0e0;}

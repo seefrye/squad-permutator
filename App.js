@@ -8,9 +8,9 @@ function App() {
     <div className="App">
       <header className="App-header">
           <Header />
-          <AppComponent />
-          <Footer />
       </header>
+      <AppComponent />
+      <Footer />
     </div>
   );
 }
