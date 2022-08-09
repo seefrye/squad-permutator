@@ -36,7 +36,7 @@ Also note that no impossible lists are presented. For instance, at Threat Level 
 ## How does it work?
 I'm very green when it comes to javascript, and that's doubly true concerning React.js. Honestly, my gut response to the question "How does it work?" is "I can't believe that it does". That said, I'm going to walk through the basic structure and flow below. I'm aware that there are probably hundreds of better ways to approach some of this - feel free to submit a pull request.
 
-### App.js
+### <code>App.js</code>
 At the top level, we have our App.js component. This is super simple, just holds the header, the footer, and the main AppComponent
 
 #### Header.js and Footer.js
