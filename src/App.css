@@ -38,8 +38,3 @@
 }
 
 .horizontal-counters{display: flex; flex-direction: row;}
-
-table, th, tr, td {
-  border: 1px solid white;
-  border-collapse: collapse;
-}

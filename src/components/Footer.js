@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div><h6>This is a placeholder footer</h6></div>
+    <div className='footer'>This project is open source. Please contribute <a href='https://github.com/seefrye/squad-permutator'>here</a>.</div>
   )
 }

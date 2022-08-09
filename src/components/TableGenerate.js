@@ -42,12 +42,6 @@ export default class TableGenerate extends Component {
         while ( e !== 10 ){
             if (2*a + 3*b + 4*c + 5*d + 6*e === threat) {
                 if ( e <= six ) {
-                    console.log("match")
-                    // let keyedTL2 = {id: "tl2", value: a}
-                    // let keyedTL3 = {id: "tl3", value: b}
-                    // let keyedTL4 = {id: "tl4", value: c}
-                    // let keyedTL5 = {id: "tl5", value: d}
-                    // let keyedTL6 = {id: "tl6", value: e}
                     ResultsArray.push({id: id, results: [a, b, c, d, e]} ) // store the values temporarily
                     id ++
                 }

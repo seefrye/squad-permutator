@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Righteous&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,68 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* .right {
+  border: 2px solid white;
+  float: right;
+}
+
+.left {
+  float: left;
+} */
+
+table, th, tr, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+td {
+  font-family: 'Audiowide';
+}
+
+th {
+  font-family: 'Righteous';
+  font-size: 18pt;
+  padding: 5px;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  font-family: 'Audiowide', cursive;
+  font-size: 48pt;
+  padding: 30px;
+  flex: 1 1 auto;
+}
+
+.footer {
+  font-family: 'Audiowide', cursive;
+  font-size: 18pt;
+  padding: 15px;
+}
+
+.null {
+  background-color: #282c34;
+  color: #282c34;
+}
+
+.number {
+  font-family: 'Righteous';
+}
+
+.dropdown {
+  font-family: 'Righteous';
+}
+
+.total {
+  font-family: 'Righteous';
+}
+
+.result {
+  font-size: 12pt;
+  padding: 5px;
 }

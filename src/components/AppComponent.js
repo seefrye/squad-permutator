@@ -32,9 +32,10 @@ class AppComponent extends Component {
     render() {
         const { twos, threes, fours, fives, sixes, leader, mission } = this.state
         return (
-            <div>
-            <hr></hr>
+            <div className='appComponent'>
+            
             <form>
+                <div className="number">
                 <div>
 					<label>Twos </label>
 					<input
@@ -95,7 +96,8 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                <hr></hr>
+                </div>
+                <div className='dropdown'>
                 <div>
                     <label for="leader">What's your leader's TL?</label>
                     <select
@@ -128,11 +130,15 @@ class AppComponent extends Component {
                         <option value="20">- 20 -</option>
                     </select>
                 </div>
-                <hr></hr>
+                </div>
+                
 			</form>
-            <TotalCheck twos={twos} threes={threes} fours={fours} fives={fives} sixes={sixes} />
-            <hr></hr>
-            <TableGenerate twos={twos} threes={threes} fours={fours} fives={fives} sixes={sixes} leaderThreat={leader} missionThreat={mission} />
+            <div className='total'>
+                <TotalCheck twos={twos} threes={threes} fours={fours} fives={fives} sixes={sixes} />
+            </div>
+            <div>
+                <TableGenerate twos={twos} threes={threes} fours={fours} fives={fives} sixes={sixes} leaderThreat={leader} missionThreat={mission} />
+            </div>
             </div>
         )
     }

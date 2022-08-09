@@ -8,14 +8,14 @@ function GenerateRow({row}) {
     const tl4 = results[2]
     const tl5 = results[3]
     const tl6 = results[4]
-
+    
     return (
         <tr>
-            <td>{tl2}</td>
-            <td>{tl3}</td>
-            <td>{tl4}</td>
-            <td>{tl5}</td>
-            <td>{tl6}</td>
+            <td className={tl2 === 0 ? 'null' : 'result'}>{tl2}</td>
+            <td className={tl3 === 0 ? 'null' : 'result'}>{tl3}</td>
+            <td className={tl4 === 0 ? 'null' : 'result'}>{tl4}</td>
+            <td className={tl5 === 0 ? 'null' : 'result'}>{tl5}</td>
+            <td className={tl6 === 0 ? 'null' : 'result'}>{tl6}</td>
         </tr>
     )
   }
