@@ -3,7 +3,9 @@
 
 ## Basic Instructions
 1. Input the number of Threat Level 2s, Threat Level 3s, etc. that are in your squad
-2. 
+2. Set your leader's Threat Level
+3. Set your mission's Threat Level
+4. Take a look at the output table. This is all of the possible permutations of your list
 
 # The Game
 
@@ -41,4 +43,21 @@ At the top level, we have our App.js component. This is super simple, just holds
 These are rendered at the top level and just display a basic header and footer. They are given a className, so we can style them with our css sheet, but these pretty much just display static text.
 
 #### AppComponent.js
-This is where the excitement is
+This is the main app component, holding all our data and displaying all the subcomponents of the app. This is where:
+- We declare our input form
+- We store our input values as this.state
+- We handle any updates to the form inputs and write the new values back to state
+- We also call our TotalCheck component here, passing it the necessary input values as state values
+- Finally, we call our TableGenerate component, again passing along the input values
+
+##### TotalCheck.js
+This really couldn't be simpler. Takes the input values, parses them as integers (they come in as objects), add them up, and see if they equal ten. Dynamically updates with the number of characters needed to add or remove. This doesn't currently _do_ anything, but could be used to only render a table when the total equals ten. Though, there is utility in being able to see a less-than-ten-character table, as this could help with preliminary listbuilding - would want to make it optional if we go this route.
+
+##### TableGenerate.js
+This is where the real action happens. This is where we crunch our numbers to generate results, and then use those results to generate table rows. Here's roughly what it's doing in order:
+
+- We grab out inputs that were passed from the AppComponent and instantiate our counting variables
+- We check our leader's Threat Level and decriment that value in the input set by one. This way, we aren't including our leader on our tables
+- Now we execute our loop. We're going to iterate over every possible combination of twos, threes, fours, fives, and sixes. 
+- - We start at 00000, add one, check to see if it's a valid squad
+- - If it is, we push it to our results object as <code>{id,[a,b,c,d,e]}</code>
