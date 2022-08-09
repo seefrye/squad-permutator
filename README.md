@@ -59,5 +59,25 @@ This is where the real action happens. This is where we crunch our numbers to ge
 - We grab out inputs that were passed from the AppComponent and instantiate our counting variables
 - We check our leader's Threat Level and decriment that value in the input set by one. This way, we aren't including our leader on our tables
 - Now we execute our loop. We're going to iterate over every possible combination of twos, threes, fours, fives, and sixes. 
-- - We start at <code>0,0,0,0,0</code>, add one, check to see if it's a valid squad
-- - If it is, we push it to our results object as <code>{id,[a,b,c,d,e]}</code>
+    - We start at <code>0,0,0,0,0</code>, add one, check to see if it's a valid squad
+    - If it is, we push it to our results object as <code>{id,[a,b,c,d,e]}</code> and then increment our id counter
+        - We need to hit each success with a unique id, as we'll need a key to <code>map()</code> those results later
+    - If it's not a valid squad, nothing happens
+    - We then increment our counters
+        - If our twos counter is less than the number of available twos, we add one there
+        - If our twos counter has hit the number of available twos, we can't increment it any more, so we increment the threes counter and reset the twos
+        - If the threes have hit their limit, we increment fours and reset twos and threes, and so on up through sixes
+    - Once all combinations have been checked, the loop will stop
+- Now we call our <code>GenerateRow</code> component, mapping it to a <code>const</code> variable
+    - Here's where that unique key comes in. We pass the auto-incremented id as the key for the rows
+    - We also pass the entirety of the row as an object. This is what we'll use to grab our values and generate our cells
+- Finally, in our <code>return</code> statement, we generate the default table headers and then pass in our pre-generated <code>const</code> that holds all our rows
+
+###### <code>GenerateRow.js</code>
+Our function takes as an input a single result from the results object. That object holds two things: an id, and an array. We don't care about the id anymore (that was for the <code>.map()</code>), so we declare a variable and assign it the value of the array.
+
+We're expecting the same thing every time here: an array with five values. We know what each array member corresponds to (the first one is the twos, the second the threes, etc.), so we just assign that array\[position\] to a convenient variable.
+
+We then wrap each of these results in a <code><td></td></code> within our <code>return</code>.
+
+Finally, we assign a <code>className</code> to the <code><td></td></code>. If the value is 0, we assign the class <code>'null'</code>, otherwise we assign the class <code>'result'</code>. This lets us set the font color to match the background color to hide zeros. This makes it much easier to read the chart - there are lots of zeros.
