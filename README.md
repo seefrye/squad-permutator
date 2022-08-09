@@ -8,4 +8,6 @@ What this calculator does is take as input a) the player's ten characters by thr
 
 For example: my list consists of 3xTL2s, 4xTL3s, 1xTL4, 1xTL5, and 1xTL6. My leader is TL3, and the mission is TL14. When I input this into the calculator, I get this as a result:
 
-<img display='block' margin-left='auto' margin-right='auto' width='75%' src='./assets/exampleTable.png' alt='sample table output' title="Sample Table Output" />
+<img src='./assets/exampleTable.png' alt='sample table output' title="Sample Table Output" />
+
+As you can see, I can take a two and three threes; two twos, a three, and a four; a five and a six; etc. - note that this is _in addition_ to your leader, who is not included in the table. This is because a) the total threat of these characters is equal to the threat of the mission minus the leader's threat, and b) the total characters of each threat value does not exceed the total number available.
