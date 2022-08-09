@@ -78,6 +78,6 @@ Our function takes as an input a single result from the results object. That obj
 
 We're expecting the same thing every time here: an array with five values. We know what each array member corresponds to (the first one is the twos, the second the threes, etc.), so we just assign that array\[position\] to a convenient variable.
 
-We then wrap each of these results in a <code><td></td></code> within our <code>return</code>.
+We then wrap each of these results in a <code>\<td>\</td></code> within our <code>return</code>.
 
 Finally, we assign a <code>className</code> to the <code><td></td></code>. If the value is 0, we assign the class <code>'null'</code>, otherwise we assign the class <code>'result'</code>. This lets us set the font color to match the background color to hide zeros. This makes it much easier to read the chart - there are lots of zeros.
