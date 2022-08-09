@@ -9,7 +9,10 @@ Marvel: Crisis Protocol is a miniature-based tabletop skirmish game, published b
 ### Gameplay Basics
 - Each player brings a list of ten characters
 - That list must include at least one leader
-- Every character is assigned a 'Threat Value
+- Every character is assigned a 'Threat Level' between 2 and 6 (7 & 8 actually exist, but they are not accounted for in this calculator - yet!)
+- Players will also choose a 'Mission Threat Level', which range from 14 to 20
+- Players then assemble a squad of characters from their list whose total Threat Level does not exceed the Mission Threat Level
+- At this point, the game can begin. Feel free to take a look at the <a href="https://static1.squarespace.com/static/5ce432b1f9d2be000134d8ae/t/624611c01029733d213cfed1/1648759240161/CP01_CrisisProtocol_Rule_Book_033122web.pdf">full rules</a>, but for the purposes of this project, we're not concerned with anything from this point forward.
 
 ## What am I looking at?
 In a game of Crisis Protocol, each player will bring ten characters, one of which is their leader. Each character has a 'threat level' ranging from 2-6 (there's actually a 7 and an 8 out there, too. Someday this calculator will account for them, but right now not a high priority). Players will select missions, which have their own threat level ranging from 14-20. Players will then select characters from their list of ten that add up to the mission's threat level.
