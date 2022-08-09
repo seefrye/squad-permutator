@@ -5,7 +5,7 @@ export class TotalCheck extends Component {
       super(props)
     
       this.state = {
-         equalsTen: false,
+         
       }
     }
 
