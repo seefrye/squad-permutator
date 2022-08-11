@@ -1,8 +1,8 @@
 node_modules
-components/Constructor.js
-components/GenerateCells.js
-components/Input.js
-components/NewInput.js
-components/ReadInputTest.js
-components/TableGenerateWorkingBackup.js
-components/Input.js
+src/components/Constructor.js
+src/components/GenerateCells.js
+src/components/Input.js
+src/components/NewInput.js
+src/components/ReadInputTest.js
+src/components/TableGenerateWorkingBackup.js
+src/components/Input.js
