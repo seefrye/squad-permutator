@@ -1,15 +1,7 @@
 import React, { Component } from 'react'
 import TableGenerate from './TableGenerate'
 import TotalCheck from './TotalCheck'
-
-// Parent component for the entire App. We want this to 
-// store all state values and pass them to components as
-// needed. This meas we want to call:
-//
-// onUpdate={this.onUpdate.bind(this)}
-//
-// on every invocation of a component that will modify
-// data
+import '../App.css'
 
 class AppComponent extends Component {
     constructor(props) {
@@ -36,7 +28,7 @@ class AppComponent extends Component {
             
             <form>
                 <div className="number">
-                <div>
+                <div >
 					<label>Twos </label>
 					<input
 						type="number"
@@ -48,7 +40,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                <div>
+                <div >
 					<label>Threes </label>
 					<input
 						type="number"
@@ -60,7 +52,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                <div>
+                <div >
 					<label>Fours </label>
 					<input
 						type="number"
@@ -72,7 +64,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                <div>
+                <div >
 					<label>Fives </label>
 					<input
 						type="number"
@@ -84,7 +76,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                <div>
+                <div >
 					<label>Sixes </label>
 					<input
 						type="number"
@@ -136,7 +128,7 @@ class AppComponent extends Component {
             <div className='total'>
                 <TotalCheck twos={twos} threes={threes} fours={fours} fives={fives} sixes={sixes} />
             </div>
-            <div>
+            <div className='result'>
                 <TableGenerate twos={twos} threes={threes} fours={fours} fives={fives} sixes={sixes} leaderThreat={leader} missionThreat={mission} />
             </div>
             </div>
