@@ -1,34 +1,40 @@
 import React, { Component } from 'react'
-import TableGenerate from './TableGenerate'
-import TotalCheck from './TotalCheck'
-import '../App.css'
+import TotalCheck from './TotalCheck';
+// import ReadInputTest from './ReadInputTest'
 
-class AppComponent extends Component {
+class Input extends Component {
     constructor(props) {
       super(props)
     
-
       this.state = {
+         leader: 2,
          twos: 0,
          threes: 0,
          fours: 0,
          fives: 0,
          sixes: 0,
-         leader: 2,
-         mission: 14,
+         mission: 14
       }
-
-      this.handleChange = this.handleChange.bind(this)
     }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value,
+        });
+    }
+
+   	handleSubmit = event => {
+           alert(`${this.state.leader}`)
+           event.preventDefault()
+        }
     
+
     render() {
         const { twos, threes, fours, fives, sixes, leader, mission } = this.state
         return (
-            <div className='appComponent'>
-            
-            <form>
-                <div className="number">
-                <div >
+            <div>
+            <form onSubmit={this.handleSubmit}>
+                <div>
 					<label>Twos </label>
 					<input
 						type="number"
@@ -40,7 +46,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                <div >
+                <div>
 					<label>Threes </label>
 					<input
 						type="number"
@@ -52,7 +58,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                <div >
+                <div>
 					<label>Fours </label>
 					<input
 						type="number"
@@ -64,7 +70,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                <div >
+                <div>
 					<label>Fives </label>
 					<input
 						type="number"
@@ -76,7 +82,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                <div >
+                <div>
 					<label>Sixes </label>
 					<input
 						type="number"
@@ -88,8 +94,6 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
-                </div>
-                <div className='dropdown'>
                 <div>
                     <label for="leader">What's your leader's TL?</label>
                     <select
@@ -98,11 +102,11 @@ class AppComponent extends Component {
                         value={leader}
                         onChange={this.handleChange}
                         >
-                        <option value="2">- 2 -</option>
-                        <option value="3">- 3 -</option>
-                        <option value="4">- 4 -</option>
-                        <option value="5">- 5 -</option>
-                        <option value="6">- 6 -</option>
+                        <option value="2">-2-</option>
+                        <option value="3">-3-</option>
+                        <option value="4">-4-</option>
+                        <option value="5">-5-</option>
+                        <option value="6">-6-</option>
                     </select>
                 </div>
                 <div>
@@ -113,34 +117,21 @@ class AppComponent extends Component {
                         value={mission}
                         onChange={this.handleChange}
                         >
-                        <option value="14">- 14 -</option>
-                        <option value="15">- 15 -</option>
-                        <option value="16">- 16 -</option>
-                        <option value="17">- 17 -</option>
-                        <option value="18">- 18 -</option>
-                        <option value="19">- 19 -</option>
-                        <option value="20">- 20 -</option>
+                        <option value="14">-14-</option>
+                        <option value="15">-15-</option>
+                        <option value="16">-16-</option>
+                        <option value="17">-17-</option>
+                        <option value="18">-18-</option>
+                        <option value="19">-19-</option>
+                        <option value="20">-20-</option>
                     </select>
                 </div>
-                </div>
-                
+				<button type="submit">Submit</button>
 			</form>
-            <div className='total'>
-                <TotalCheck twos={twos} threes={threes} fours={fours} fives={fives} sixes={sixes} />
-            </div>
-            <div className='result'>
-                <TableGenerate twos={twos} threes={threes} fours={fours} fives={fives} sixes={sixes} leaderThreat={leader} missionThreat={mission} />
-            </div>
+            <TotalCheck twos={twos} threes={threes} fours={fours} fives={fives} sixes={sixes} />
             </div>
         )
     }
-
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value,
-        });
-    }
-
 }
 
-export default AppComponent
+export default Input
