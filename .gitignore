@@ -1,5 +1,4 @@
 node_modules
-src
 components/Constructor.js
 components/GenerateCells.js
 components/Input.js
