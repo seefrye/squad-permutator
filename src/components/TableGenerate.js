@@ -91,8 +91,11 @@ export default class TableGenerate extends Component {
     
     return (
       <div>
-        <table>
+        <table className='center'>
             <thead>
+                <tr>
+                    <th colspan="5">Mission Level: {missionThreat}  Leader Level: {leaderThreat}</th>
+                </tr>
                 <tr>
                     <th>TL 2</th>
                     <th>TL 3</th>

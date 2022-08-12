@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Righteous&family=Stalinist+One&display=swap');
 
 body {
   margin: 0;
@@ -34,6 +34,9 @@ td {
 
 th {
   font-family: 'Righteous';
-  font-size: 18pt;
+  font-size: 18pt; 
+  background-color: white;
+  color: #282c34;
   padding: 5px;
+  border: 1px solid #282c34;
 }

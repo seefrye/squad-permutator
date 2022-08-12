@@ -26,8 +26,9 @@ class AppComponent extends Component {
         return (
             <div className='appComponent'>
             
-            <form>
-                <div className="number">
+            <form className='form'>
+                {/* <div className="horizontal-counters"> */}
+                <div className='number'>
                 <div >
 					<label>Twos </label>
 					<input
@@ -91,7 +92,7 @@ class AppComponent extends Component {
                 </div>
                 <div className='dropdown'>
                 <div>
-                    <label for="leader">What's your leader's TL?</label>
+                    <label for="leader">What's your leader's TL?</label><br></br>
                     <select
                         name="leader"
                         id="leader"
@@ -105,8 +106,9 @@ class AppComponent extends Component {
                         <option value="6">- 6 -</option>
                     </select>
                 </div>
+                <hr></hr>
                 <div>
-                    <label for="leader">What's your mission's TL?</label>
+                    <label for="leader">What's your mission's TL?</label><br></br>
                     <select
                         name="mission"
                         id="mission"

@@ -17,60 +17,93 @@
   background-color: #282c34;
   min-height: 100vh;
   display: grid;
-  /* align-items: center;
-  justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white; 
   grid-template-columns: auto auto;
-  grid-template-rows: max-content max-content max-content max-content max-content max-content;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  /* border: 1px solid white; */
 }
 
 .header {
   font-family: 'Audiowide', cursive;
   font-size: 48pt;
-  padding: 30px;
+  padding: 3px;
   column-span: all;
-  grid-row: 50%;
+  grid-row: 1;
+  /* border: 1px solid white; */
 }
 
 .footer {
   font-family: 'Audiowide', cursive;
   column-span: all;
-  grid-row: 6 / 7;
-  font-size: 18pt;
+  grid-row: 6;
+  font-size: 12pt;
   padding: 15px;
+  /* border: 1px solid white; */
 }
 
 .appComponent {
-  column-span: all;
   grid-row: 2 / 6;
+  column-span: all;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: auto auto;
-  grid-template-rows: max-content max-content max-content max-content;
+  padding: 10px;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  justify-content: center;
+  /* border: 1px solid white; */
+}
+
+.form {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  column-span: all;
+  grid-row: 2;
+  border: 1px solid white;
+  justify-content: center;
+  padding: 25px;
 }
 
 .number {
   font-family: 'Righteous';
-  grid-row:  1 / 2;
-  grid-column: 2 / 3;
+  grid-row: 2;
+  grid-column: 2;
+  /* border: 1px solid white; */
+  width: auto;
+  padding: 15px;
 }
 
 .dropdown {
   font-family: 'Righteous';
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
+  grid-row: 2;
+  grid-column: 1;
+  /* border: 1px solid white; */
+  width: 75%;
+  padding: 15px;
 }
 
 .total {
-  font-family: 'Righteous';
+  font-family: 'Stalinist One';
+  grid-row: 3;
   column-span: all;
-  grid-row: 2 / 3;
+  /* border: 1px solid white; */
+  padding: 15px;
+  font-size: 24pt;
 }
 
 .result {
+  grid-row: 4 / 6;
   column-span: all;
-  grid-row: 3 / 5;
+  /* border: 1px solid white; */
+  
+}
+
+.center {
+  margin: auto;
 }
 
 .App-link {
@@ -91,4 +124,8 @@
   }
 }
 
-.horizontal-counters{display: flex; flex-direction: row;}
+.horizontal-counters {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
