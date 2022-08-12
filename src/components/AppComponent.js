@@ -41,6 +41,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
+                <br />
                 <div >
 					<label>Threes </label>
 					<input
@@ -53,6 +54,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
+                <br />
                 <div >
 					<label>Fours </label>
 					<input
@@ -65,6 +67,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
+                <br />
                 <div >
 					<label>Fives </label>
 					<input
@@ -77,6 +80,7 @@ class AppComponent extends Component {
 						onChange={this.handleChange}
 					/>
 				</div>
+                <br />
                 <div >
 					<label>Sixes </label>
 					<input
@@ -108,7 +112,7 @@ class AppComponent extends Component {
                 </div>
                 <hr></hr>
                 <div>
-                    <label for="leader">What's your mission's TL?</label><br></br>
+                    <label for="mission">What's your mission's TL?</label><br></br>
                     <select
                         name="mission"
                         id="mission"
